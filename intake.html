@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your discovery questionnaire — AdmitSmith</title>
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --indigo: #4f46e5; --indigo-dark: #3730a3; --indigo-50: #eef2ff;
+    --ink: #17181c; --slate: #52556b; --muted: #8a8ea3; --line: #e7e8f0;
+    --bg-soft: #f7f7fb; --green: #16a34a; --radius: 12px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: var(--ink);
+    background: var(--bg-soft); line-height: 1.6; -webkit-font-smoothing: antialiased;
+    padding: 32px 16px;
+  }
+  .shell { max-width: 720px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 9px; font-weight: 800; font-size: 19px; margin-bottom: 22px; }
+  .brand .mark { width: 30px; height: 30px; border-radius: 8px; background: var(--indigo); color: #fff; display: grid; place-items: center; font-size: 15px; }
+  .cardw { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 32px 30px; }
+
+  .progress { height: 6px; background: var(--line); border-radius: 100px; overflow: hidden; margin-bottom: 8px; }
+  .progress > i { display: block; height: 100%; width: 20%; background: var(--indigo); transition: width .3s ease; }
+  .progress-label { font-size: 13px; color: var(--muted); font-weight: 500; margin-bottom: 26px; }
+
+  h1 { font-size: 25px; font-weight: 800; letter-spacing: -.02em; line-height: 1.2; }
+  .lead { color: var(--slate); font-size: 15.5px; margin-top: 8px; margin-bottom: 24px; }
+  .note { background: var(--indigo-50); color: var(--indigo-dark); font-size: 13.5px; padding: 11px 14px; border-radius: 10px; margin-bottom: 22px; }
+
+  .step { display: none; }
+  .step.active { display: block; }
+
+  .field { margin-bottom: 20px; }
+  label { display: block; font-size: 14.5px; font-weight: 600; margin-bottom: 7px; }
+  label .opt { font-weight: 500; color: var(--muted); font-size: 13px; }
+  .hint { font-size: 13px; color: var(--muted); margin-top: -3px; margin-bottom: 8px; }
+  input, textarea, select {
+    width: 100%; font-family: inherit; font-size: 15px; color: var(--ink);
+    border: 1.5px solid var(--line); border-radius: 10px; padding: 11px 13px; background: #fff;
+    transition: border .15s ease; resize: vertical;
+  }
+  input:focus, textarea:focus, select:focus { outline: none; border-color: var(--indigo); }
+  textarea { min-height: 90px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  .actions { display: flex; justify-content: space-between; gap: 12px; margin-top: 28px; }
+  .btn { font-family: inherit; font-weight: 600; font-size: 15px; padding: 12px 22px; border-radius: 10px; border: 1.5px solid transparent; cursor: pointer; transition: background .2s ease, transform .12s ease; }
+  .btn-primary { background: var(--indigo); color: #fff; }
+  .btn-primary:hover { background: var(--indigo-dark); }
+  .btn-ghost { background: #fff; color: var(--ink); border-color: var(--line); }
+  .btn-ghost:hover { border-color: var(--indigo); color: var(--indigo); }
+  .btn:disabled { opacity: .5; cursor: not-allowed; }
+  .err { color: #dc2626; font-size: 13px; margin-top: 6px; display: none; }
+
+  .done { text-align: center; padding: 20px 0; }
+  .done .tick { width: 62px; height: 62px; border-radius: 50%; background: var(--green); color: #fff; display: grid; place-items: center; font-size: 30px; margin: 0 auto 18px; }
+  .done h1 { font-size: 24px; }
+  .consent { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--slate); }
+  .consent input { width: auto; margin-top: 4px; }
+  @media (max-width: 560px) { .row { grid-template-columns: 1fr; } .cardw { padding: 24px 20px; } }
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="brand"><span class="mark">A</span> AdmitSmith</div>
+  <div class="cardw">
+
+    <div class="progress"><i id="bar"></i></div>
+    <div class="progress-label" id="plabel">Step 1 of 5 · Basics</div>
+
+    <!-- TODO: replace action with your Formspree/Tally endpoint so responses reach your inbox -->
+    <form id="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+      <!-- STEP 1 -->
+      <div class="step active" data-title="Basics">
+        <h1>Let's start with the basics</h1>
+        <p class="lead">A few details so we know exactly what you're applying for.</p>
+        <div class="row">
+          <div class="field"><label>Full name</label><input name="full_name" id="full_name" /><div class="err" data-for="full_name">Please enter your name</div></div>
+          <div class="field"><label>Email</label><input type="email" name="email" id="email" /><div class="err" data-for="email">Please enter a valid email</div></div>
+        </div>
+        <div class="row">
+          <div class="field"><label>Phone / WhatsApp</label><input name="phone" /></div>
+          <div class="field"><label>Package you purchased</label>
+            <select name="package"><option>SOP Essentials</option><option>Admit Pro</option><option>All-In Admit</option></select>
+          </div>
+        </div>
+        <div class="field"><label>Target degree &amp; program</label><div class="hint">e.g. MS in Computer Science</div><input name="target_degree" /></div>
+        <div class="row">
+          <div class="field"><label>Target country</label><input name="country" /></div>
+          <div class="field"><label>Intake term &amp; year</label><div class="hint">e.g. Fall 2027</div><input name="intake" /></div>
+        </div>
+        <div class="field"><label>Target universities</label><div class="hint">List all — we tailor the "why us" for each.</div><textarea name="target_universities"></textarea></div>
+        <div class="field"><label>University-specific prompt or word limit <span class="opt">(optional)</span></label><textarea name="university_prompt" placeholder="Paste the exact wording if the university gives one."></textarea></div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="step" data-title="Academics">
+        <h1>Your academic background</h1>
+        <p class="lead">The foundation your story is built on.</p>
+        <div class="row">
+          <div class="field"><label>Undergraduate degree &amp; major</label><input name="ug_degree" /></div>
+          <div class="field"><label>College / university</label><input name="ug_college" /></div>
+        </div>
+        <div class="row">
+          <div class="field"><label>Graduation year</label><input name="grad_year" /></div>
+          <div class="field"><label>GPA / percentage</label><input name="gpa" /></div>
+        </div>
+        <div class="field"><label>Most relevant courses you did well in</label><textarea name="relevant_courses"></textarea></div>
+        <div class="field"><label>Academic honors, rank, or scholarships <span class="opt">(optional)</span></label><textarea name="academic_honors"></textarea></div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="step" data-title="Projects &amp; experience">
+        <h1>Projects, work &amp; achievements</h1>
+        <p class="lead">Be specific — real names, tools, and numbers are what make your SOP impossible to fake.</p>
+        <div class="field"><label>Key projects or research</label><div class="hint">For each: what was the goal, what YOU did, the tools, and the result (with numbers if you can).</div><textarea name="projects" style="min-height:130px"></textarea></div>
+        <div class="field"><label>Work / internship experience <span class="opt">(optional)</span></label><div class="hint">Company, role, duration, your key contribution and its impact.</div><textarea name="work_experience"></textarea></div>
+        <div class="field"><label>Achievements <span class="opt">(optional)</span></label><div class="hint">Publications, patents, hackathons, competitions, certifications.</div><textarea name="achievements"></textarea></div>
+        <div class="field"><label>Technical / professional skills</label><textarea name="skills"></textarea></div>
+      </div>
+
+      <!-- STEP 4 — THE DEEP DIVE (the USP) -->
+      <div class="step" data-title="The deep dive">
+        <h1>Now the real you</h1>
+        <p class="lead">This is what sets your SOP apart. Be as candid and honest as you want.</p>
+        <div class="note">Everything here is confidential and used only to write your documents. The more honest you are, the more your SOP becomes unmistakably yours. Share only what you're comfortable with.</div>
+        <div class="field"><label>The moment you got hooked on this field</label><div class="hint">A specific memory — not "since childhood." What actually pulled you in?</div><textarea name="origin_moment"></textarea></div>
+        <div class="field"><label>A setback, failure, or turning point that shaped you</label><textarea name="turning_point"></textarea></div>
+        <div class="field"><label>What genuinely drives you?</label><div class="hint">Your real motivation, your purpose, even your fears. Be honest — this is where the magic is.</div><textarea name="what_drives_you"></textarea></div>
+        <div class="field"><label>Anything about your background or life that shaped your path <span class="opt">(optional)</span></label><div class="hint">Family, where you grew up, a personal challenge — whatever feels true. As candid as you like.</div><textarea name="personal_context"></textarea></div>
+        <div class="field"><label>What are you most proud of?</label><textarea name="proud_of"></textarea></div>
+        <div class="field"><label>Anything to address? <span class="opt">(optional)</span></label><div class="hint">Backlogs, a low semester, a career gap — context helps us frame it well.</div><textarea name="concerns"></textarea></div>
+      </div>
+
+      <!-- STEP 5 — WHY & GOALS -->
+      <div class="step" data-title="Goals &amp; voice">
+        <h1>Your "why" and where you're headed</h1>
+        <p class="lead">The last piece — your program fit and your ambitions.</p>
+        <div class="field"><label>Why this specific program / university?</label><div class="hint">Name professors, labs, courses, or resources you want. Shows real research.</div><textarea name="why_program"></textarea></div>
+        <div class="row">
+          <div class="field"><label>Short-term goal</label><div class="hint">Your first role after graduating.</div><textarea name="short_term_goal" style="min-height:70px"></textarea></div>
+          <div class="field"><label>Long-term goal</label><div class="hint">Where you see yourself in 5–10 years.</div><textarea name="long_term_goal" style="min-height:70px"></textarea></div>
+        </div>
+        <div class="field"><label>Leadership, extracurriculars, volunteering <span class="opt">(optional)</span></label><textarea name="extracurriculars"></textarea></div>
+        <div class="field"><label>Write 3–4 sentences in your own words</label><div class="hint">Any topic — this lets us match your natural voice so the SOP sounds like you.</div><textarea name="writing_sample"></textarea></div>
+        <div class="field"><label>Anything else we should know? <span class="opt">(optional)</span></label><textarea name="anything_else"></textarea></div>
+        <div class="field"><label class="consent"><input type="checkbox" id="consent" /> <span>I confirm the details above are true to my real profile, and I'm happy for AdmitSmith to use them to write my documents.</span></label><div class="err" data-for="consent">Please confirm to continue</div></div>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn btn-ghost" id="back" style="visibility:hidden">&larr; Back</button>
+        <button type="button" class="btn btn-primary" id="next">Continue &rarr;</button>
+        <button type="submit" class="btn btn-primary" id="submit" style="display:none">Submit my answers</button>
+      </div>
+    </form>
+
+    <!-- SUCCESS -->
+    <div class="done" id="done" style="display:none">
+      <div class="tick">&#10003;</div>
+      <h1>Got it — thank you!</h1>
+      <p class="lead" style="margin-top:10px">Your answers are in. We're already on it. Your SOP, personally reviewed by our founder and delivered with an AI-detection report, will reach you within 48 hours. Keep an eye on your inbox.</p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  var steps = Array.prototype.slice.call(document.querySelectorAll('.step'));
+  var i = 0;
+  var bar = document.getElementById('bar');
+  var plabel = document.getElementById('plabel');
+  var back = document.getElementById('back');
+  var next = document.getElementById('next');
+  var submit = document.getElementById('submit');
+
+  function render() {
+    steps.forEach(function (s, idx) { s.classList.toggle('active', idx === i); });
+    bar.style.width = ((i + 1) / steps.length * 100) + '%';
+    plabel.textContent = 'Step ' + (i + 1) + ' of ' + steps.length + ' · ' + steps[i].getAttribute('data-title');
+    back.style.visibility = i === 0 ? 'hidden' : 'visible';
+    next.style.display = i === steps.length - 1 ? 'none' : 'inline-block';
+    submit.style.display = i === steps.length - 1 ? 'inline-block' : 'none';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  function showErr(id, on) { var e = document.querySelector('.err[data-for="' + id + '"]'); if (e) e.style.display = on ? 'block' : 'none'; }
+
+  function validateStep() {
+    if (i === 0) {
+      var n = document.getElementById('full_name').value.trim();
+      var em = document.getElementById('email').value.trim();
+      var ok = true;
+      if (!n) { showErr('full_name', true); ok = false; } else showErr('full_name', false);
+      if (!/^\S+@\S+\.\S+$/.test(em)) { showErr('email', true); ok = false; } else showErr('email', false);
+      return ok;
+    }
+    return true;
+  }
+
+  next.addEventListener('click', function () { if (validateStep()) { i++; render(); } });
+  back.addEventListener('click', function () { i--; render(); });
+
+  document.getElementById('form').addEventListener('submit', function (e) {
+    if (!document.getElementById('consent').checked) { e.preventDefault(); showErr('consent', true); return; }
+    showErr('consent', false);
+    // If the Formspree endpoint is not set yet, show the success state without a real POST.
+    if (this.action.indexOf('YOUR_FORM_ID') !== -1) {
+      e.preventDefault();
+      this.style.display = 'none';
+      document.querySelector('.progress').style.display = 'none';
+      plabel.style.display = 'none';
+      document.getElementById('done').style.display = 'block';
+    }
+  });
+
+  render();
+</script>
+</body>
+</html>
