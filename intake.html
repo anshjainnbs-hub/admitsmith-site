@@ -76,7 +76,10 @@
     <div class="progress-label" id="plabel">Step 1 of 5 · Basics</div>
 
     <!-- TODO: replace action with your Formspree/Tally endpoint so responses reach your inbox -->
-    <form id="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form id="form" action="https://formsubmit.co/anshj4893@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New AdmitSmith intake — SOP order" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
 
       <div style="display:flex;align-items:center;gap:9px;background:#f0fdf4;border:1px solid #bbf7d0;color:#15803d;font-size:13.5px;font-weight:500;padding:11px 14px;border-radius:10px;margin-bottom:22px;"><span style="font-size:15px;">&#128274;</span> Your answers stay completely private — we never share, sell, or publish your information. Ever.</div>
 
@@ -217,16 +220,23 @@
   back.addEventListener('click', function () { i--; render(); });
 
   document.getElementById('form').addEventListener('submit', function (e) {
-    if (!document.getElementById('consent').checked) { e.preventDefault(); showErr('consent', true); return; }
+    e.preventDefault();
+    if (!document.getElementById('consent').checked) { showErr('consent', true); return; }
     showErr('consent', false);
-    // If the Formspree endpoint is not set yet, show the success state without a real POST.
-    if (this.action.indexOf('YOUR_FORM_ID') !== -1) {
-      e.preventDefault();
-      this.style.display = 'none';
+    var form = this;
+    var btn = document.getElementById('submit');
+    btn.disabled = true; btn.textContent = 'Submitting…';
+    function showDone() {
+      form.style.display = 'none';
       document.querySelector('.progress').style.display = 'none';
       plabel.style.display = 'none';
       document.getElementById('done').style.display = 'block';
     }
+    var endpoint = form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+    fetch(endpoint, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
+      .then(function (r) { return r.json(); })
+      .then(function () { showDone(); })
+      .catch(function () { btn.disabled = false; btn.textContent = 'Submit my answers'; alert('Something went wrong — please try again.'); });
   });
 
   render();
