@@ -10,9 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --indigo: #4f46e5;
-    --indigo-dark: #3730a3;
-    --indigo-50: #eef2ff;
+    --indigo: #6d28d9;
+    --indigo-dark: #4c1d95;
+    --indigo-50: #f3effe;
     --ink: #17181c;
     --slate: #52556b;
     --muted: #8a8ea3;
@@ -21,6 +21,7 @@
     --bg-soft: #f7f7fb;
     --amber: #f59e0b;
     --green: #16a34a;
+    --grad: linear-gradient(120deg, #1e3a8a 0%, #6d28d9 34%, #db2777 68%, #f59e0b 100%);
     --radius: 14px;
     --maxw: 1080px;
   }
@@ -41,8 +42,8 @@
     border-radius: 10px; border: 1.5px solid transparent; cursor: pointer;
     transition: transform .12s ease, background .2s ease, box-shadow .2s ease;
   }
-  .btn-primary { background: var(--indigo); color: #fff; box-shadow: 0 6px 18px rgba(79,70,229,.28); }
-  .btn-primary:hover { background: var(--indigo-dark); transform: translateY(-1px); }
+  .btn-primary { background: var(--grad); color: #fff; box-shadow: 0 8px 22px rgba(109,40,217,.30); }
+  .btn-primary:hover { filter: saturate(1.08) brightness(1.06); transform: translateY(-1px); }
   .btn-ghost { background: #fff; color: var(--ink); border-color: var(--line); }
   .btn-ghost:hover { border-color: var(--indigo); color: var(--indigo); }
   .eyebrow {
@@ -61,7 +62,7 @@
   .nav { display: flex; align-items: center; justify-content: space-between; height: 66px; }
   .logo { display: flex; align-items: center; gap: 9px; font-weight: 800; font-size: 19px; letter-spacing: -.02em; }
   .logo-mark {
-    width: 30px; height: 30px; border-radius: 8px; background: var(--indigo);
+    width: 30px; height: 30px; border-radius: 8px; background: var(--grad);
     color: #fff; display: grid; place-items: center; font-size: 15px; font-weight: 800;
   }
   .nav-links { display: flex; align-items: center; gap: 28px; }
@@ -72,9 +73,10 @@
 
   /* HERO */
   .hero { padding: 84px 0 72px; text-align: center; background:
-    radial-gradient(1200px 400px at 50% -80px, var(--indigo-50), transparent); }
+    radial-gradient(820px 360px at 12% -50px, #e9e5ff 0%, transparent 60%),
+    radial-gradient(820px 360px at 88% -30px, #fdeede 0%, transparent 60%); }
   .hero h1 { font-size: 52px; max-width: 780px; margin: 22px auto 0; }
-  .hero h1 .hl { color: var(--indigo); }
+  .hero h1 .hl { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
   .hero p.sub { font-size: 20px; color: var(--slate); max-width: 620px; margin: 22px auto 0; }
   .hero-cta { display: flex; gap: 14px; justify-content: center; margin-top: 34px; flex-wrap: wrap; }
   .trust-row {
@@ -122,7 +124,7 @@
   }
   .plan.featured { border: 2px solid var(--indigo); box-shadow: 0 18px 50px rgba(79,70,229,.16); position: relative; }
   .plan .tag {
-    position: absolute; top: -13px; left: 28px; background: var(--indigo); color: #fff;
+    position: absolute; top: -13px; left: 28px; background: var(--grad); color: #fff;
     font-size: 12.5px; font-weight: 700; padding: 5px 13px; border-radius: 100px;
   }
   .plan h3 { font-size: 19px; }
@@ -160,7 +162,7 @@
   .qa .pm { color: var(--indigo); font-size: 22px; font-weight: 400; flex-shrink: 0; }
 
   /* CTA BAND */
-  .cta-band { background: var(--ink); border-radius: 22px; padding: 60px 40px; text-align: center; color: #fff; }
+  .cta-band { background: linear-gradient(120deg, #1e3a8a 0%, #6d28d9 50%, #a21caf 100%); border-radius: 22px; padding: 60px 40px; text-align: center; color: #fff; }
   .cta-band h2 { font-size: 34px; }
   .cta-band p { color: #b9bcce; font-size: 18px; margin: 14px auto 28px; max-width: 520px; }
 
