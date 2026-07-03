@@ -177,8 +177,9 @@
     <!-- SUCCESS -->
     <div class="done" id="done" style="display:none">
       <div class="tick">&#10003;</div>
-      <h1>Got it — thank you!</h1>
-      <p class="lead" style="margin-top:10px">Your answers are in. We're already on it. Your SOP, reviewed by our team of experts and delivered with an AI-detection report, will reach you within 48 hours. Keep an eye on your inbox.</p>
+      <h1 id="done-title">Almost there — one last step</h1>
+      <p class="lead" style="margin-top:10px" id="done-msg">Your details are saved. Complete your payment to confirm your order and start your 48-hour clock.</p>
+      <a id="pay-btn" class="btn btn-primary" href="#" style="display:none;font-size:16px;padding:14px 30px;margin-top:6px;">Complete payment</a>
     </div>
 
   </div>
@@ -192,6 +193,13 @@
   var back = document.getElementById('back');
   var next = document.getElementById('next');
   var submit = document.getElementById('submit');
+  var PLANS = {
+    essentials: { label: 'SOP Essentials', amount: '₹1,999', link: 'https://rzp.io/rzp/IKIOLgC' },
+    pro:        { label: 'Admit Pro',      amount: '₹4,999', link: 'https://rzp.io/rzp/b2spOoCm' },
+    allin:      { label: 'All-In Admit',   amount: '₹8,999', link: 'https://rzp.io/rzp/3ZHU2xoi' }
+  };
+  var selectedPlan = PLANS[new URLSearchParams(location.search).get('plan')] || null;
+  if (selectedPlan) { var _pkg = document.querySelector('[name=package]'); if (_pkg) _pkg.value = selectedPlan.label; }
 
   function render() {
     steps.forEach(function (s, idx) { s.classList.toggle('active', idx === i); });
@@ -230,6 +238,16 @@
       form.style.display = 'none';
       document.querySelector('.progress').style.display = 'none';
       plabel.style.display = 'none';
+      if (selectedPlan) {
+        document.getElementById('done-msg').textContent = 'Your details are saved. Complete your payment for ' + selectedPlan.label + ' (' + selectedPlan.amount + ') to confirm your order and start your 48-hour clock.';
+        var pb = document.getElementById('pay-btn');
+        pb.href = selectedPlan.link;
+        pb.textContent = 'Pay ' + selectedPlan.amount + ' →';
+        pb.style.display = 'inline-flex';
+      } else {
+        document.getElementById('done-title').textContent = 'Got it — thank you!';
+        document.getElementById('done-msg').textContent = 'Your answers are in. If you have not completed payment yet, please do so to confirm your order.';
+      }
       document.getElementById('done').style.display = 'block';
     }
     var endpoint = form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
