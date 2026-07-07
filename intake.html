@@ -84,6 +84,8 @@
 
       <div style="display:flex;align-items:center;gap:9px;background:#f0fdf4;border:1px solid #bbf7d0;color:#15803d;font-size:13.5px;font-weight:500;padding:11px 14px;border-radius:10px;margin-bottom:22px;"><span style="font-size:15px;">&#128274;</span> Your answers stay completely private — we never share, sell, or publish your information. Ever.</div>
 
+      <div id="founding-banner" style="display:none;background:linear-gradient(120deg,#f3effe,#fde9f3);border:1px solid #e9d5ff;color:#6d28d9;font-size:14px;font-weight:600;padding:12px 15px;border-radius:10px;margin-bottom:20px;">🎉 Founding Cohort — your SOP, written free. Fill this out and our team takes it from there.</div>
+
       <!-- STEP 1 -->
       <div class="step active" data-title="Basics">
         <h1>Let's start with the basics</h1>
@@ -197,10 +199,14 @@
   var PLANS = {
     essentials: { label: 'SOP Essentials', amount: '₹1,999', link: 'https://rzp.io/rzp/IKIOLgC' },
     pro:        { label: 'Admit Pro',      amount: '₹4,999', link: 'https://rzp.io/rzp/b2spOoCm' },
-    allin:      { label: 'All-In Admit',   amount: '₹8,999', link: 'https://rzp.io/rzp/3ZHU2xoi' }
+    allin:      { label: 'All-In Admit',   amount: '₹8,999', link: 'https://rzp.io/rzp/3ZHU2xoi' },
+    founding:   { label: 'Founding Cohort', amount: null, link: null }
   };
   var selectedPlan = PLANS[new URLSearchParams(location.search).get('plan')] || null;
-  if (selectedPlan) { var _pkg = document.querySelector('[name=package]'); if (_pkg) _pkg.value = selectedPlan.label; }
+  if (selectedPlan) {
+    if (selectedPlan.link) { var _pkg = document.querySelector('[name=package]'); if (_pkg) _pkg.value = selectedPlan.label; }
+    else { var _fb = document.getElementById('founding-banner'); if (_fb) _fb.style.display = 'block'; }
+  }
 
   function render() {
     steps.forEach(function (s, idx) { s.classList.toggle('active', idx === i); });
@@ -239,12 +245,15 @@
       form.style.display = 'none';
       document.querySelector('.progress').style.display = 'none';
       plabel.style.display = 'none';
-      if (selectedPlan) {
+      if (selectedPlan && selectedPlan.link) {
         document.getElementById('done-msg').textContent = 'Your details are saved. Complete your payment for ' + selectedPlan.label + ' (' + selectedPlan.amount + ') to confirm your order and start your 48-hour clock.';
         var pb = document.getElementById('pay-btn');
         pb.href = selectedPlan.link;
         pb.textContent = 'Pay ' + selectedPlan.amount + ' →';
         pb.style.display = 'inline-flex';
+      } else if (selectedPlan && !selectedPlan.link) {
+        document.getElementById('done-title').textContent = "You're in! 🎉";
+        document.getElementById('done-msg').textContent = "Thanks for applying to our founding cohort. We'll review your details and email you within 24 hours to start on your SOP — completely free.";
       } else {
         document.getElementById('done-title').textContent = 'Got it — thank you!';
         document.getElementById('done-msg').textContent = 'Your answers are in. If you have not completed payment yet, please do so to confirm your order.';
