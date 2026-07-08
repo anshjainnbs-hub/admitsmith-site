@@ -253,6 +253,7 @@
       form.style.display = 'none';
       document.querySelector('.progress').style.display = 'none';
       plabel.style.display = 'none';
+      try { if (typeof gtag === 'function') { gtag('event', 'conversion', { 'send_to': 'AW-18308074374/1eK0CJHv58wcEIaX_JlE', 'value': 1.0, 'currency': 'INR' }); } } catch (e) {}
       if (selectedPlan && selectedPlan.link) {
         document.getElementById('done-msg').textContent = 'Your details are saved. Complete your payment for ' + selectedPlan.label + ' (' + selectedPlan.amount + ') to confirm your order and start your 48-hour clock.';
         var pb = document.getElementById('pay-btn');
