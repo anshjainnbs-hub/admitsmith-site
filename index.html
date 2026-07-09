@@ -79,14 +79,12 @@
 
   .disclaimer { background:var(--indigo-50); border:1px solid #e4dcfb; border-radius:14px; padding:20px 24px; text-align:center; color:var(--indigo-dark); font-size:14.5px; max-width:860px; margin:0 auto; }
 
-  .quotes { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-  .quote { background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:26px; }
-  .quote p { font-size:15.5px; color:var(--ink); }
-  .quote .who { display:flex; align-items:center; gap:11px; margin-top:18px; }
-  .quote .av { width:38px; height:38px; border-radius:50%; background:var(--indigo-50); color:var(--indigo); display:grid; place-items:center; font-weight:700; font-size:14px; }
-  .quote .who b { font-size:14.5px; }
-  .quote .who span { font-size:13px; color:var(--muted); display:block; }
-  .stars { color:var(--amber); font-size:15px; letter-spacing:2px; }
+  .gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .gcard { background:#fff; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; transition:transform .15s ease, box-shadow .2s ease; }
+  .gcard:hover { transform:translateY(-3px); box-shadow:0 14px 40px rgba(23,24,28,.08); }
+  .gcard img { width:100%; height:224px; object-fit:cover; display:block; background:var(--bg-soft); }
+  .gcard .cap { padding:16px 18px; font-size:15px; font-weight:700; color:var(--ink); }
+  .gcard .cap span { display:block; font-weight:500; color:var(--slate); font-size:13.5px; margin-top:3px; }
 
   .faq { max-width:760px; margin:0 auto; }
   .qa { border-bottom:1px solid var(--line); }
@@ -107,7 +105,7 @@
   @media (max-width:860px) {
     .nav-links { display:none; }
     .menu-btn { display:block; }
-    .grid-3, .grid-2, .steps, .quotes { grid-template-columns:1fr; }
+    .grid-3, .grid-2, .steps, .gallery { grid-template-columns:1fr; }
     .hero h1 { font-size:38px; }
     .hero p.sub { font-size:18px; }
     .sec-head h2 { font-size:30px; }
@@ -217,14 +215,18 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS (placeholder — swap for real ones) -->
+<!-- TRUST / IMAGERY BAND -->
 <section style="background:var(--bg-soft);">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow">What students say</span><h2>Paperwork, off their plate</h2></div>
-    <div class="quotes">
-      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"My passport renewal was done without me figuring out that confusing website. They booked everything and told me exactly what to carry."</p><div class="who"><div class="av">RS</div><div><b>Riya S.</b><span>Delhi</span></div></div></div>
-      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Got my degree certificate attested for my Masters abroad in days. I had no idea where to even start — they handled all of it."</p><div class="who"><div class="av">AK</div><div><b>Arjun K.</b><span>Pune</span></div></div></div>
-      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"They filled my CUET form perfectly and on time. Worth every rupee — I was terrified of making a mistake."</p><div class="who"><div class="av">MP</div><div><b>Meera P.</b><span>Hyderabad</span></div></div></div>
+    <div class="sec-head">
+      <span class="eyebrow">Trusted across India</span>
+      <h2>From your first form to your flight abroad</h2>
+      <p>Whatever stage you're at — school, college, or heading overseas — we handle the paperwork behind it.</p>
+    </div>
+    <div class="gallery">
+      <div class="gcard"><img src="/img/university.jpg" alt="Indian university campus" loading="lazy" /><div class="cap">Admissions &amp; exam forms<span>CUET, NEET, JEE, college portals</span></div></div>
+      <div class="gcard"><img src="/img/students.jpg" alt="Indian graduates celebrating at convocation" loading="lazy" /><div class="cap">Certificates &amp; attestation<span>Degrees &amp; documents, ready for the world</span></div></div>
+      <div class="gcard"><img src="/img/passport.jpg" alt="Republic of India passport" loading="lazy" /><div class="cap">Passport, PCC &amp; going abroad<span>The overseas paperwork, sorted</span></div></div>
     </div>
   </div>
 </section>
