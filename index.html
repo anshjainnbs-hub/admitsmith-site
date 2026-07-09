@@ -11,8 +11,8 @@
 </script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>AdmitSmith — SOPs built from your real story</title>
-<meta name="description" content="Deeply personal Statements of Purpose, expert-reviewed and delivered with an AI-detection report. Written from your real story — not a template." />
+<title>AdmitSmith — Free Study-Abroad Counseling for Ireland &amp; the UK</title>
+<meta name="description" content="Free 1-on-1 counseling for your Master's in Ireland and the UK. We shortlist your universities, guide your application, and support your visa — at no cost to you." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -44,6 +44,7 @@
   }
   a { color: inherit; text-decoration: none; }
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+  .hl { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
   .btn {
     display: inline-flex; align-items: center; gap: 8px;
     font-weight: 600; font-size: 15px; padding: 13px 22px;
@@ -62,7 +63,6 @@
   h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; font-weight: 800; }
   section { padding: 88px 0; }
 
-  /* NAV */
   header {
     position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.85);
     backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
@@ -79,13 +79,11 @@
   .nav-cta { display: flex; gap: 10px; align-items: center; }
   .menu-btn { display: none; background: none; border: none; font-size: 24px; cursor: pointer; }
 
-  /* HERO */
   .hero { padding: 84px 0 72px; text-align: center; background:
     radial-gradient(820px 360px at 12% -50px, #e9e5ff 0%, transparent 60%),
     radial-gradient(820px 360px at 88% -30px, #fdeede 0%, transparent 60%); }
-  .hero h1 { font-size: 52px; max-width: 780px; margin: 22px auto 0; }
-  .hero h1 .hl { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
-  .hero p.sub { font-size: 20px; color: var(--slate); max-width: 620px; margin: 22px auto 0; }
+  .hero h1 { font-size: 52px; max-width: 800px; margin: 22px auto 0; }
+  .hero p.sub { font-size: 20px; color: var(--slate); max-width: 640px; margin: 22px auto 0; }
   .hero-cta { display: flex; gap: 14px; justify-content: center; margin-top: 34px; flex-wrap: wrap; }
   .trust-row {
     display: flex; gap: 26px; justify-content: center; flex-wrap: wrap;
@@ -94,13 +92,12 @@
   .trust-row span { display: inline-flex; align-items: center; gap: 7px; }
   .trust-row .ic { color: var(--green); font-weight: 800; }
 
-  /* SECTION HEADINGS */
-  .sec-head { text-align: center; max-width: 640px; margin: 0 auto 52px; }
+  .sec-head { text-align: center; max-width: 660px; margin: 0 auto 52px; }
   .sec-head h2 { font-size: 38px; margin-top: 14px; }
   .sec-head p { color: var(--slate); font-size: 18px; margin-top: 14px; }
 
-  /* USP CARDS */
   .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
   .card {
     background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
     padding: 30px 26px; transition: transform .15s ease, box-shadow .2s ease;
@@ -113,7 +110,6 @@
   .card h3 { font-size: 20px; margin-bottom: 9px; }
   .card p { color: var(--slate); font-size: 15.5px; }
 
-  /* HOW IT WORKS */
   .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
   .step { text-align: left; }
   .step .num {
@@ -123,29 +119,13 @@
   .step h3 { font-size: 17.5px; margin-bottom: 7px; }
   .step p { color: var(--slate); font-size: 15px; }
 
-  /* PRICING */
-  #pricing { background: var(--bg-soft); }
-  .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: stretch; }
-  .plan {
-    background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 32px 28px;
-    display: flex; flex-direction: column;
-  }
-  .plan.featured { border: 2px solid var(--indigo); box-shadow: 0 18px 50px rgba(79,70,229,.16); position: relative; }
-  .plan .tag {
-    position: absolute; top: -13px; left: 28px; background: var(--grad); color: #fff;
-    font-size: 12.5px; font-weight: 700; padding: 5px 13px; border-radius: 100px;
-  }
-  .plan h3 { font-size: 19px; }
-  .plan .price { font-size: 40px; font-weight: 800; margin: 14px 0 4px; letter-spacing: -.03em; }
-  .plan .price small { font-size: 15px; font-weight: 500; color: var(--muted); }
-  .plan ul { list-style: none; margin: 20px 0 26px; display: grid; gap: 11px; }
-  .plan li { display: flex; gap: 10px; font-size: 15px; color: var(--slate); }
-  .plan li b { color: var(--ink); font-weight: 600; }
-  .plan .check { color: var(--green); font-weight: 800; }
-  .plan .btn { width: 100%; justify-content: center; margin-top: auto; }
+  #cost { background: var(--bg-soft); }
+  .free-card { max-width: 760px; margin: 0 auto; background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 34px 32px; }
+  .free-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .free-list li { list-style: none; display: flex; gap: 10px; font-size: 15.5px; color: var(--slate); }
+  .free-list .check { color: var(--green); font-weight: 800; }
   .pay-note { text-align: center; color: var(--muted); font-size: 14px; margin-top: 26px; }
 
-  /* TESTIMONIALS */
   .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
   .quote { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
   .quote p { font-size: 15.5px; color: var(--ink); }
@@ -156,7 +136,6 @@
   .quote .who span { font-size: 13px; color: var(--muted); display: block; }
   .stars { color: var(--amber); font-size: 15px; letter-spacing: 2px; }
 
-  /* FAQ */
   .faq { max-width: 760px; margin: 0 auto; }
   .qa { border-bottom: 1px solid var(--line); }
   .qa button {
@@ -166,22 +145,20 @@
   }
   .qa .ans { max-height: 0; overflow: hidden; transition: max-height .3s ease; color: var(--slate); font-size: 15.5px; }
   .qa .ans p { padding-bottom: 22px; }
-  .qa.open .ans { max-height: 260px; }
+  .qa.open .ans { max-height: 320px; }
   .qa .pm { color: var(--indigo); font-size: 22px; font-weight: 400; flex-shrink: 0; }
 
-  /* CTA BAND */
   .cta-band { background: linear-gradient(120deg, #1e3a8a 0%, #6d28d9 50%, #a21caf 100%); border-radius: 22px; padding: 60px 40px; text-align: center; color: #fff; }
   .cta-band h2 { font-size: 34px; }
-  .cta-band p { color: #b9bcce; font-size: 18px; margin: 14px auto 28px; max-width: 520px; }
+  .cta-band p { color: #d9d3ee; font-size: 18px; margin: 14px auto 28px; max-width: 540px; }
 
-  /* FOOTER */
   footer { border-top: 1px solid var(--line); padding: 40px 0; color: var(--muted); font-size: 14px; }
   .foot { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
 
   @media (max-width: 860px) {
     .nav-links { display: none; }
     .menu-btn { display: block; }
-    .grid-3, .steps, .price-grid, .quotes { grid-template-columns: 1fr; }
+    .grid-3, .grid-2, .steps, .quotes, .free-list { grid-template-columns: 1fr; }
     .hero h1 { font-size: 38px; }
     .hero p.sub { font-size: 18px; }
     .sec-head h2 { font-size: 30px; }
@@ -195,8 +172,8 @@
 <link rel="canonical" href="https://admitsmith.com/" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://admitsmith.com/" />
-<meta property="og:title" content="AdmitSmith — SOPs built from your real story" />
-<meta property="og:description" content="Deeply personal Statements of Purpose, expert-reviewed and delivered with an AI-detection report. Written from your real story — not a template." />
+<meta property="og:title" content="AdmitSmith — Free Study-Abroad Counseling for Ireland & the UK" />
+<meta property="og:description" content="Free 1-on-1 counseling for your Master's in Ireland and the UK. We shortlist your universities, guide your application, and support your visa — at no cost." />
 <meta name="twitter:card" content="summary" />
 </head>
 <body>
@@ -207,11 +184,11 @@
     <nav class="nav-links">
       <a href="#how">How it works</a>
       <a href="#why">Why us</a>
-      <a href="#pricing">Pricing</a>
+      <a href="#destinations">Destinations</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="nav-cta">
-      <a href="#pricing" class="btn btn-primary">Get my SOP</a>
+      <a href="/counseling.html" class="btn btn-primary">Book free counseling</a>
     </div>
     <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display='flex'">&#9776;</button>
   </div>
@@ -220,94 +197,62 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <span class="eyebrow">For students applying to the US · UK · Canada · Australia · Germany · Ireland · New Zealand · Singapore &amp; beyond</span>
-    <h1>Your SOP, written from <span class="hl">your real story</span> — not a template</h1>
-    <p class="sub">We ask the questions no one else does — about your life, your turning points, your purpose — and turn your honest answers into a Statement of Purpose that sounds unmistakably like you.</p>
+    <span class="eyebrow">For students applying for a Master's abroad</span>
+    <h1>Study your Master's in <span class="hl">Ireland &amp; the UK</span> — with a counselor by your side</h1>
+    <p class="sub">Free 1-on-1 counseling. We shortlist the right universities for you, guide your entire application, and support your visa — at no cost to you.</p>
     <div class="hero-cta">
-      <a href="#pricing" class="btn btn-primary">Get started &rarr;</a>
+      <a href="/counseling.html" class="btn btn-primary">Book free counseling &rarr;</a>
       <a href="#how" class="btn btn-ghost">See how it works</a>
     </div>
     <div class="trust-row">
-      <span><i class="ic">&#10003;</i> Reviewed by our expert team</span>
-      <span><i class="ic">&#10003;</i> AI-detection report included</span>
-      <span><i class="ic">&#10003;</i> 48-hour delivery</span>
-      <span><i class="ic">&#10003;</i> Money-back guarantee</span>
-      <span><i class="ic">&#10003;</i> 100% private &amp; confidential</span>
+      <span><i class="ic">&#10003;</i> 100% free counseling</span>
+      <span><i class="ic">&#10003;</i> Expert counselors</span>
+      <span><i class="ic">&#10003;</i> End-to-end support</span>
+      <span><i class="ic">&#10003;</i> Ireland &amp; UK specialists</span>
     </div>
   </div>
 </section>
 
-<!-- WHY US / USP -->
+<!-- WHY US -->
 <section id="why">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Why we're different</span>
-      <h2>Most SOP services fill in a template. We tell your story.</h2>
-      <p>The SOP that gets you admitted is the one that could only have been written by you. That takes real depth — so that's exactly what we go after.</p>
+      <span class="eyebrow">Why choose AdmitSmith</span>
+      <h2>A counselor in your corner — not a call-center</h2>
+      <p>Study-abroad is full of pushy agents and generic advice. We do it differently: honest, personal, and focused entirely on getting you into a university you'll love.</p>
     </div>
     <div class="grid-3">
       <div class="card">
-        <div class="icn">&#9998;</div>
-        <h3>We ask the deep questions</h3>
-        <p>Our discovery goes personal — sometimes uncomfortably so. Your motivations, your setbacks, what actually drives you. Be as candid as you want; the more honest you are, the more your SOP becomes yours alone.</p>
+        <div class="icn">&#128172;</div>
+        <h3>Personal 1-on-1 guidance</h3>
+        <p>A dedicated counselor who understands your profile, your goals, and your budget — and builds a plan around you, not a template.</p>
       </div>
       <div class="card">
-        <div class="icn">&#128065;</div>
-        <h3>Reviewed by experts</h3>
-        <p>Every application is read, refined, and approved by our team of experienced mentors — teachers and admissions experts who know exactly what selection committees look for. No assembly line, no generic templates.</p>
+        <div class="icn">&#129517;</div>
+        <h3>End-to-end support</h3>
+        <p>From shortlisting universities to applications, documents, scholarships, and your student visa — we're with you at every step.</p>
       </div>
       <div class="card">
-        <div class="icn">&#128737;</div>
-        <h3>AI-detection report included</h3>
-        <p>Every SOP ships with an originality and AI-detection report — proof in hand that your statement reads as authentically human. Submit with total confidence.</p>
+        <div class="icn">&#129309;</div>
+        <h3>Honest &amp; transparent</h3>
+        <p>Our counseling is free because universities pay us when you enroll. So our only goal is your admit — never an upsell.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROOF -->
+<!-- SERVICES -->
 <section>
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">See the proof</span>
-      <h2>Not a template. Not a bot. Proof included.</h2>
-      <p>Every order ships with an AI-detection report — so you submit knowing your statement reads as authentically human.</p>
+      <span class="eyebrow">What we handle</span>
+      <h2>Everything from shortlist to boarding pass</h2>
     </div>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:22px; align-items:stretch;">
-
-      <div class="card">
-        <div style="display:flex; align-items:center; gap:11px; margin-bottom:20px;">
-          <div style="width:40px;height:40px;border-radius:10px;background:var(--indigo-50);color:var(--indigo);display:grid;place-items:center;font-size:20px;">&#128209;</div>
-          <div>
-            <div style="font-weight:600;font-size:16px;">AI Detection Report</div>
-            <div style="font-size:13px;color:var(--muted);">sop_final.pdf · scanned with GPTZero</div>
-          </div>
-          <span style="margin-left:auto;background:#dcfce7;color:#15803d;font-size:12px;font-weight:600;padding:5px 12px;border-radius:100px;">Passed</span>
-        </div>
-        <div style="text-align:center;margin:6px 0 22px;">
-          <div style="font-size:52px;font-weight:800;color:var(--green);letter-spacing:-.03em;line-height:1;">100%</div>
-          <div style="font-size:15px;color:var(--slate);font-weight:600;margin-top:4px;">Human-written</div>
-        </div>
-        <div style="margin-bottom:14px;">
-          <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px;"><span style="color:var(--slate);font-weight:600;">Human</span><span style="color:var(--green);font-weight:700;">100%</span></div>
-          <div style="height:8px;border-radius:100px;background:var(--line);overflow:hidden;"><div style="height:100%;width:100%;background:var(--green);"></div></div>
-        </div>
-        <div>
-          <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px;"><span style="color:var(--slate);font-weight:600;">AI-generated</span><span style="color:var(--muted);font-weight:700;">0%</span></div>
-          <div style="height:8px;border-radius:100px;background:var(--line);overflow:hidden;"><div style="height:100%;width:2%;background:var(--muted);"></div></div>
-        </div>
-        <div style="display:flex;align-items:center;gap:8px;margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--slate);"><span style="color:var(--green);font-weight:800;">&#10003;</span> Reads as authentically human-written.</div>
-      </div>
-
-      <div class="card">
-        <span style="display:inline-block;background:var(--indigo-50);color:var(--indigo);font-size:12px;font-weight:600;padding:5px 12px;border-radius:100px;margin-bottom:16px;">Sample SOP excerpt</span>
-        <div style="font-family:Georgia,'Times New Roman',serif;font-size:15.5px;line-height:1.8;color:var(--ink);">
-          <p style="margin-bottom:14px;">The gesture-recognition model I built for my final-year project ran flawlessly in Google Colab. Then I flashed it onto an Arduino Nano 33 BLE, and it fell apart — too slow, too large, useless on a chip smaller than my thumb.</p>
-          <p>That failure taught me more than any clean result had. The genuinely hard problem in machine learning is not squeezing another percent of accuracy out of a GPU; it is getting intelligence to run on a five-dollar processor with a few kilobytes to spare&hellip;</p>
-        </div>
-        <div style="font-size:13.5px;color:var(--muted);margin-top:16px;padding-top:14px;border-top:1px solid var(--line);">Written from one student's real story — every line specific, nothing borrowed.</div>
-      </div>
-
+    <div class="grid-2">
+      <div class="card"><div class="icn">&#127891;</div><h3>University shortlisting</h3><p>We match you to Master's programs in Ireland &amp; the UK that fit your profile, budget, and career goals — with a realistic mix of ambitious and safe options.</p></div>
+      <div class="card"><div class="icn">&#128221;</div><h3>Applications &amp; documents</h3><p>We guide your entire application — forms, SOP and essay review, LORs, and transcripts — so nothing is missed and everything is submitted right.</p></div>
+      <div class="card"><div class="icn">&#128196;</div><h3>Visa &amp; pre-departure</h3><p>Student-visa documentation, interview prep, and pre-departure guidance — accommodation, forex, and what to expect when you land.</p></div>
+      <div class="card"><div class="icn">&#128176;</div><h3>Scholarships &amp; loans</h3><p>We help you find scholarships you qualify for and connect you with trusted education-loan and forex partners.</p></div>
     </div>
   </div>
 </section>
@@ -317,138 +262,75 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">How it works</span>
-      <h2>From your story to submission-ready in 48 hours</h2>
+      <h2>Four simple steps to your admit</h2>
     </div>
     <div class="steps">
-      <div class="step">
-        <div class="num">1</div>
-        <h3>Choose your package</h3>
-        <p>Pick the plan that fits — a standout SOP, or the full application bundle.</p>
-      </div>
-      <div class="step">
-        <div class="num">2</div>
-        <h3>Tell us everything</h3>
-        <p>You get our deep-discovery questionnaire. Answer candidly — your goals, your background, your defining moments.</p>
-      </div>
-      <div class="step">
-        <div class="num">3</div>
-        <h3>Complete your payment</h3>
-        <p>Secure checkout confirms your order and starts your 48-hour clock.</p>
-      </div>
-      <div class="step">
-        <div class="num">4</div>
-        <h3>Delivered with proof</h3>
-        <p>Our experts craft and review, then deliver in 48 hours with an AI-detection report.</p>
-      </div>
+      <div class="step"><div class="num">1</div><h3>Book your free call</h3><p>Tell us your background and goals. A counselor reaches out within 24 hours.</p></div>
+      <div class="step"><div class="num">2</div><h3>We build your shortlist</h3><p>We recommend the right universities and programs for your profile and budget.</p></div>
+      <div class="step"><div class="num">3</div><h3>We guide your applications</h3><p>Documents, SOP, essays, deadlines — we manage it all with you, start to finish.</p></div>
+      <div class="step"><div class="num">4</div><h3>You get admitted &amp; fly</h3><p>Offer in hand, we handle your visa and pre-departure. Next stop: campus.</p></div>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section id="pricing">
+<!-- DESTINATIONS -->
+<section id="destinations">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Simple pricing</span>
-      <h2>Pick your package</h2>
-      <p>Pay once, upfront. No subscriptions, no surprises.</p>
+      <span class="eyebrow">Where you'll study</span>
+      <h2>Two of the smartest destinations for a Master's</h2>
     </div>
-    <div class="price-grid">
-      <div class="plan">
-        <h3>SOP Essentials</h3>
-        <div class="price">&#8377;1,999</div>
-        <ul>
-          <li><span class="check">&#10003;</span> <span>1 tailored <b>Statement of Purpose</b></span></li>
-          <li><span class="check">&#10003;</span> <span>Deep-discovery questionnaire</span></li>
-          <li><span class="check">&#10003;</span> <span>Expert review</span></li>
-          <li><span class="check">&#10003;</span> <span>AI-detection report</span></li>
-          <li><span class="check">&#10003;</span> <span>1 revision · 48-hour delivery</span></li>
-        </ul>
-        <!-- PAYMENT: replace with your Razorpay Payment Link for ₹1,999 (see razorpay-setup.md). Set the link's post-payment redirect to /intake.html -->
-        <a href="/intake.html?plan=essentials" class="btn btn-ghost">Get started</a>
+    <div class="grid-2">
+      <div class="card">
+        <div class="icn">&#127470;&#127466;</div>
+        <h3>Ireland</h3>
+        <p>Europe's fast-rising tech and pharma hub. English-speaking, world-class universities, and a <b>2-year post-study work visa</b> — an easier, less-crowded path than the US.</p>
       </div>
-      <div class="plan featured">
-        <span class="tag">Most popular</span>
-        <h3>Admit Pro</h3>
-        <div class="price">&#8377;4,999</div>
-        <ul>
-          <li><span class="check">&#10003;</span> <span>Everything in Essentials, plus:</span></li>
-          <li><span class="check">&#10003;</span> <span><b>2 Letters of Recommendation</b></span></li>
-          <li><span class="check">&#10003;</span> <span><b>Resume / CV</b> rewrite</span></li>
-          <li><span class="check">&#10003;</span> <span>University-specific tailoring</span></li>
-          <li><span class="check">&#10003;</span> <span>2 revisions · 48-hour delivery</span></li>
-        </ul>
-        <!-- PAYMENT: replace with your Razorpay Payment Link for ₹4,999 (see razorpay-setup.md). Set the link's post-payment redirect to /intake.html -->
-        <a href="/intake.html?plan=pro" class="btn btn-primary">Get started</a>
-      </div>
-      <div class="plan">
-        <h3>All-In Admit</h3>
-        <div class="price">&#8377;8,999</div>
-        <ul>
-          <li><span class="check">&#10003;</span> <span>Everything in Admit Pro, plus:</span></li>
-          <li><span class="check">&#10003;</span> <span><b>Personal statement</b> + essays</span></li>
-          <li><span class="check">&#10003;</span> <span><b>LinkedIn</b> optimization</span></li>
-          <li><span class="check">&#10003;</span> <span>Priority <b>24-hour</b> delivery</span></li>
-          <li><span class="check">&#10003;</span> <span>Unlimited revisions</span></li>
-        </ul>
-        <!-- PAYMENT: replace with your Razorpay Payment Link for ₹8,999 (see razorpay-setup.md). Set the link's post-payment redirect to /intake.html -->
-        <a href="/intake.html?plan=allin" class="btn btn-ghost">Get started</a>
+      <div class="card">
+        <div class="icn">&#127468;&#127463;</div>
+        <h3>United Kingdom</h3>
+        <p>Globally respected universities and <b>1-year Master's</b> programs that get you working sooner. A 2-year Graduate Route visa lets you stay and build your career.</p>
       </div>
     </div>
-    <p class="pay-note">Secure payment · Money-back guarantee if you're not satisfied with your first draft.</p>
   </div>
 </section>
 
-<!-- TESTIMONIALS (placeholder — swap for real ones after first clients) -->
+<!-- COST -->
+<section id="cost">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">What it costs</span>
+      <h2>Counseling &amp; application support — <span class="hl">free</span></h2>
+      <p>Genuinely free to you. Universities pay us a commission when you enroll, so our only job is getting you admitted somewhere you'll love. No hidden fees, no pressure.</p>
+    </div>
+    <div class="free-card">
+      <ul class="free-list">
+        <li><span class="check">&#10003;</span> <span>1-on-1 expert counseling</span></li>
+        <li><span class="check">&#10003;</span> <span>University shortlisting</span></li>
+        <li><span class="check">&#10003;</span> <span>Application guidance</span></li>
+        <li><span class="check">&#10003;</span> <span>SOP &amp; document review</span></li>
+        <li><span class="check">&#10003;</span> <span>Visa &amp; pre-departure support</span></li>
+        <li><span class="check">&#10003;</span> <span>Scholarship &amp; loan guidance</span></li>
+      </ul>
+      <div style="text-align:center;margin-top:26px;">
+        <a href="/counseling.html" class="btn btn-primary">Book your free counseling &rarr;</a>
+      </div>
+    </div>
+    <p class="pay-note">Optional premium support (in-depth SOP editing, dedicated visa assistance) available on request.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS (placeholder — swap for real ones after first students) -->
 <section>
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">What students say</span>
-      <h2>Stories that got them in</h2>
+      <h2>From confused to admitted</h2>
     </div>
     <div class="quotes">
-      <div class="quote">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"They asked me things no consultant ever had. My SOP finally sounded like me, not a brochure. Admitted to my top choice."</p>
-        <div class="who"><div class="av">RS</div><div><b>Riya S.</b><span>MS Computer Science, USA</span></div></div>
-      </div>
-      <div class="quote">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"The detection report gave me real peace of mind. It was clearly written from my own experiences, and it showed."</p>
-        <div class="who"><div class="av">AK</div><div><b>Arjun K.</b><span>MBA, UK</span></div></div>
-      </div>
-      <div class="quote">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"Fast, personal, and honest. One of their mentors actually called to understand my story before writing a word."</p>
-        <div class="who"><div class="av">MP</div><div><b>Meera P.</b><span>MS Data Science, Canada</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section>
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Our team</span>
-      <h2>Curated by experienced mentors — never a template</h2>
-      <p>Your application is shaped and reviewed by a team of academic experts: experienced teachers, former professors, and admissions specialists who know exactly what selection committees look for.</p>
-    </div>
-    <div class="grid-3">
-      <div class="card">
-        <div class="icn">&#127891;</div>
-        <h3>Academic experts</h3>
-        <p>Experienced teachers and former professors who have guided students into top programs around the world.</p>
-      </div>
-      <div class="card">
-        <div class="icn">&#128218;</div>
-        <h3>Admissions specialists</h3>
-        <p>Mentors who understand how selection committees actually read applications — and what makes one stand out.</p>
-      </div>
-      <div class="card">
-        <div class="icn">&#9998;</div>
-        <h3>Expert editors</h3>
-        <p>Every SOP is carefully reviewed and refined by a real expert before it reaches you. No assembly line, no shortcuts.</p>
-      </div>
+      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"They shortlisted universities I'd never have found on my own, and guided every document. Got my admit to Ireland stress-free."</p><div class="who"><div class="av">RS</div><div><b>Riya S.</b><span>MSc Data Analytics, Ireland</span></div></div></div>
+      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Honest advice, no pressure to pick a random university. My counselor actually cared. Visa was approved first try."</p><div class="who"><div class="av">AK</div><div><b>Arjun K.</b><span>MSc Management, UK</span></div></div></div>
+      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Everything was free and they still helped with scholarships and my loan. Couldn't have done it without them."</p><div class="who"><div class="av">MP</div><div><b>Meera P.</b><span>MSc Computer Science, Ireland</span></div></div></div>
     </div>
   </div>
 </section>
@@ -462,24 +344,24 @@
     </div>
     <div class="faq">
       <div class="qa">
-        <button>Will my SOP be flagged as AI-written? <span class="pm">+</span></button>
-        <div class="ans"><p>No. Your SOP is built from your own candid, specific answers and carefully rewritten and reviewed by our team of experts — not copy-pasted from any tool. We also run every SOP through an AI-detection check and hand you the report as proof it reads as human. Authentic, specific writing is exactly what detectors recognize as genuine.</p></div>
+        <button>Is it really free? <span class="pm">+</span></button>
+        <div class="ans"><p>Yes — our counseling and application support are completely free to you. We're paid a commission by universities when you enroll, so our incentive is simple: get you admitted to a place you'll love. No fees, no pressure.</p></div>
       </div>
       <div class="qa">
-        <button>Why do you ask such personal questions? <span class="pm">+</span></button>
-        <div class="ans"><p>Because that's the whole difference. Admissions officers read thousands of generic statements. The one that stands out is built from real, specific, personal detail — the moment you got hooked, the setback you overcame, what actually drives you. You share only what you're comfortable with, and everything stays confidential.</p></div>
+        <button>Which countries and universities do you cover? <span class="pm">+</span></button>
+        <div class="ans"><p>We specialise in Master's programs in Ireland and the UK. We shortlist universities based on your profile, budget, and goals — a realistic mix of ambitious and safe options.</p></div>
       </div>
       <div class="qa">
-        <button>How fast will I get my SOP? <span class="pm">+</span></button>
-        <div class="ans"><p>48 hours from the moment you submit your questionnaire (24 hours on the All-In plan). Each package includes free revisions so we can perfect it together.</p></div>
+        <button>How do you make money if it's free? <span class="pm">+</span></button>
+        <div class="ans"><p>Universities pay partner counselors a commission for every student who successfully enrolls. That's a standard part of how international admissions work — and it means you pay nothing for our help.</p></div>
       </div>
       <div class="qa">
-        <button>Is my information kept private? <span class="pm">+</span></button>
-        <div class="ans"><p>Completely. Your answers are kept strictly confidential — used only to write your documents, and never shared, sold, or published to anyone, ever. Your story is yours alone, so you can be as candid as you want.</p></div>
+        <button>When should I start? <span class="pm">+</span></button>
+        <div class="ans"><p>Ideally 6–12 months before your intended intake, but we can help at any stage — even if your deadlines are close. Book a free call and we'll map out your timeline.</p></div>
       </div>
       <div class="qa">
-        <button>What if I'm not happy with it? <span class="pm">+</span></button>
-        <div class="ans"><p>You get free revisions on every plan, and a money-back guarantee if you're not satisfied with your first draft. Our goal is a statement you're proud to submit.</p></div>
+        <button>Do you help with the student visa? <span class="pm">+</span></button>
+        <div class="ans"><p>Yes — end to end. We guide your visa documentation, interview prep, and pre-departure (accommodation, forex, and what to expect on arrival).</p></div>
       </div>
     </div>
   </div>
@@ -489,9 +371,9 @@
 <section>
   <div class="wrap">
     <div class="cta-band">
-      <h2>Your story deserves better than a template.</h2>
-      <p>Get a Statement of Purpose that sounds like you — and only you.</p>
-      <a href="#pricing" class="btn btn-primary" style="background:#fff;color:var(--ink);box-shadow:none;">Get my SOP &rarr;</a>
+      <h2>Your Master's abroad — with expert help, free.</h2>
+      <p>Book a free counseling call and get a personalised university shortlist within 24 hours.</p>
+      <a href="/counseling.html" class="btn btn-primary" style="background:#fff;color:var(--ink);box-shadow:none;">Book free counseling &rarr;</a>
     </div>
   </div>
 </section>
@@ -499,7 +381,7 @@
 <footer>
   <div class="wrap foot">
     <span>&copy; 2026 AdmitSmith &mdash; a brand of Neoteric Business Solutions Pvt. Ltd.</span>
-    <span><a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a> &middot; <a href="/refund.html">Refunds</a> &middot; <a href="/contact.html">Contact</a> &middot; hello@admitsmith.com</span>
+    <span><a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a> &middot; <a href="/contact.html">Contact</a> &middot; hello@admitsmith.com</span>
   </div>
 </footer>
 
