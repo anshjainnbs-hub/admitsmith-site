@@ -11,158 +11,107 @@
 </script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>AdmitSmith — Free Study-Abroad Counseling for Ireland &amp; the UK</title>
-<meta name="description" content="Free 1-on-1 counseling for your Master's in Ireland and the UK. We shortlist your universities, guide your application, and support your visa — at no cost to you." />
+<title>AdmitSmith — Student Documents &amp; Applications, Handled by Experts</title>
+<meta name="description" content="We handle the paperwork students dread — passport, document attestation, certificates, admission & entrance-exam forms, and scholarships. Filled right by real experts, fast." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --indigo: #6d28d9;
-    --indigo-dark: #4c1d95;
-    --indigo-50: #f3effe;
-    --ink: #17181c;
-    --slate: #52556b;
-    --muted: #8a8ea3;
-    --line: #e7e8f0;
-    --bg: #ffffff;
-    --bg-soft: #f7f7fb;
-    --amber: #f59e0b;
-    --green: #16a34a;
-    --grad: linear-gradient(120deg, #1e3a8a 0%, #6d28d9 34%, #db2777 68%, #f59e0b 100%);
-    --radius: 14px;
-    --maxw: 1080px;
+    --indigo:#6d28d9; --indigo-dark:#4c1d95; --indigo-50:#f3effe; --ink:#17181c; --slate:#52556b;
+    --muted:#8a8ea3; --line:#e7e8f0; --bg:#ffffff; --bg-soft:#f7f7fb; --amber:#f59e0b; --green:#16a34a;
+    --grad:linear-gradient(120deg,#1e3a8a 0%,#6d28d9 34%,#db2777 68%,#f59e0b 100%); --radius:14px; --maxw:1080px;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    color: var(--ink);
-    background: var(--bg);
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-  }
-  a { color: inherit; text-decoration: none; }
-  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
-  .hl { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
-  .btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-weight: 600; font-size: 15px; padding: 13px 22px;
-    border-radius: 10px; border: 1.5px solid transparent; cursor: pointer;
-    transition: transform .12s ease, background .2s ease, box-shadow .2s ease;
-  }
-  .btn-primary { background: var(--grad); color: #fff; box-shadow: 0 8px 22px rgba(109,40,217,.30); }
-  .btn-primary:hover { filter: saturate(1.08) brightness(1.06); transform: translateY(-1px); }
-  .btn-ghost { background: #fff; color: var(--ink); border-color: var(--line); }
-  .btn-ghost:hover { border-color: var(--indigo); color: var(--indigo); }
-  .eyebrow {
-    display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600;
-    color: var(--indigo); background: var(--indigo-50); padding: 6px 13px; border-radius: 100px;
-    letter-spacing: .2px;
-  }
-  h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; font-weight: 800; }
-  section { padding: 88px 0; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Plus Jakarta Sans',system-ui,sans-serif; color:var(--ink); background:var(--bg); line-height:1.65; -webkit-font-smoothing:antialiased; }
+  a { color:inherit; text-decoration:none; }
+  .wrap { max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+  .hl { background:var(--grad); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; }
+  .btn { display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:15px; padding:13px 22px; border-radius:10px; border:1.5px solid transparent; cursor:pointer; transition:transform .12s ease, box-shadow .2s ease, filter .2s ease; }
+  .btn-primary { background:var(--grad); color:#fff; box-shadow:0 8px 22px rgba(109,40,217,.30); }
+  .btn-primary:hover { filter:saturate(1.08) brightness(1.06); transform:translateY(-1px); }
+  .btn-ghost { background:#fff; color:var(--ink); border-color:var(--line); }
+  .btn-ghost:hover { border-color:var(--indigo); color:var(--indigo); }
+  .eyebrow { display:inline-flex; align-items:center; gap:7px; font-size:13px; font-weight:600; color:var(--indigo); background:var(--indigo-50); padding:6px 13px; border-radius:100px; letter-spacing:.2px; }
+  h1,h2,h3 { line-height:1.15; letter-spacing:-0.02em; font-weight:800; }
+  section { padding:88px 0; }
 
-  header {
-    position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.85);
-    backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
-  }
-  .nav { display: flex; align-items: center; justify-content: space-between; height: 66px; }
-  .logo { display: flex; align-items: center; gap: 9px; font-weight: 800; font-size: 19px; letter-spacing: -.02em; }
-  .logo-mark {
-    width: 30px; height: 30px; border-radius: 8px; background: var(--grad);
-    color: #fff; display: grid; place-items: center; font-size: 15px; font-weight: 800;
-  }
-  .nav-links { display: flex; align-items: center; gap: 28px; }
-  .nav-links a { font-size: 15px; font-weight: 500; color: var(--slate); }
-  .nav-links a:hover { color: var(--ink); }
-  .nav-cta { display: flex; gap: 10px; align-items: center; }
-  .menu-btn { display: none; background: none; border: none; font-size: 24px; cursor: pointer; }
+  header { position:sticky; top:0; z-index:50; background:rgba(255,255,255,.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+  .nav { display:flex; align-items:center; justify-content:space-between; height:66px; }
+  .logo { display:flex; align-items:center; gap:9px; font-weight:800; font-size:19px; letter-spacing:-.02em; }
+  .logo-mark { width:30px; height:30px; border-radius:8px; background:var(--grad); color:#fff; display:grid; place-items:center; font-size:15px; font-weight:800; }
+  .nav-links { display:flex; align-items:center; gap:28px; }
+  .nav-links a { font-size:15px; font-weight:500; color:var(--slate); }
+  .nav-links a:hover { color:var(--ink); }
+  .menu-btn { display:none; background:none; border:none; font-size:24px; cursor:pointer; }
 
-  .hero { padding: 84px 0 72px; text-align: center; background:
+  .hero { padding:84px 0 72px; text-align:center; background:
     radial-gradient(820px 360px at 12% -50px, #e9e5ff 0%, transparent 60%),
     radial-gradient(820px 360px at 88% -30px, #fdeede 0%, transparent 60%); }
-  .hero h1 { font-size: 52px; max-width: 800px; margin: 22px auto 0; }
-  .hero p.sub { font-size: 20px; color: var(--slate); max-width: 640px; margin: 22px auto 0; }
-  .hero-cta { display: flex; gap: 14px; justify-content: center; margin-top: 34px; flex-wrap: wrap; }
-  .trust-row {
-    display: flex; gap: 26px; justify-content: center; flex-wrap: wrap;
-    margin-top: 40px; color: var(--slate); font-size: 14.5px; font-weight: 500;
-  }
-  .trust-row span { display: inline-flex; align-items: center; gap: 7px; }
-  .trust-row .ic { color: var(--green); font-weight: 800; }
+  .hero h1 { font-size:52px; max-width:820px; margin:22px auto 0; }
+  .hero p.sub { font-size:20px; color:var(--slate); max-width:660px; margin:22px auto 0; }
+  .hero-cta { display:flex; gap:14px; justify-content:center; margin-top:34px; flex-wrap:wrap; }
+  .trust-row { display:flex; gap:26px; justify-content:center; flex-wrap:wrap; margin-top:40px; color:var(--slate); font-size:14.5px; font-weight:500; }
+  .trust-row span { display:inline-flex; align-items:center; gap:7px; }
+  .trust-row .ic { color:var(--green); font-weight:800; }
 
-  .sec-head { text-align: center; max-width: 660px; margin: 0 auto 52px; }
-  .sec-head h2 { font-size: 38px; margin-top: 14px; }
-  .sec-head p { color: var(--slate); font-size: 18px; margin-top: 14px; }
+  .sec-head { text-align:center; max-width:680px; margin:0 auto 52px; }
+  .sec-head h2 { font-size:38px; margin-top:14px; }
+  .sec-head p { color:var(--slate); font-size:18px; margin-top:14px; }
 
-  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
-  .card {
-    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
-    padding: 30px 26px; transition: transform .15s ease, box-shadow .2s ease;
-  }
-  .card:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(23,24,28,.07); }
-  .card .icn {
-    width: 46px; height: 46px; border-radius: 11px; background: var(--indigo-50);
-    color: var(--indigo); display: grid; place-items: center; font-size: 22px; margin-bottom: 18px;
-  }
-  .card h3 { font-size: 20px; margin-bottom: 9px; }
-  .card p { color: var(--slate); font-size: 15.5px; }
+  .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:28px 26px; transition:transform .15s ease, box-shadow .2s ease; display:flex; flex-direction:column; }
+  .card:hover { transform:translateY(-3px); box-shadow:0 14px 40px rgba(23,24,28,.07); }
+  .card .icn { width:46px; height:46px; border-radius:11px; background:var(--indigo-50); color:var(--indigo); display:grid; place-items:center; font-size:22px; margin-bottom:16px; }
+  .card h3 { font-size:19px; margin-bottom:8px; }
+  .card p { color:var(--slate); font-size:15px; }
+  .svc .price { margin-top:14px; font-weight:700; color:var(--ink); font-size:15px; }
+  .svc .price small { color:var(--muted); font-weight:500; }
+  .svc .go { margin-top:14px; font-size:14px; font-weight:600; color:var(--indigo); }
 
-  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-  .step { text-align: left; }
-  .step .num {
-    width: 38px; height: 38px; border-radius: 50%; background: var(--ink); color: #fff;
-    display: grid; place-items: center; font-weight: 700; font-size: 16px; margin-bottom: 16px;
-  }
-  .step h3 { font-size: 17.5px; margin-bottom: 7px; }
-  .step p { color: var(--slate); font-size: 15px; }
+  .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  .step { text-align:left; }
+  .step .num { width:38px; height:38px; border-radius:50%; background:var(--ink); color:#fff; display:grid; place-items:center; font-weight:700; font-size:16px; margin-bottom:16px; }
+  .step h3 { font-size:17.5px; margin-bottom:7px; }
+  .step p { color:var(--slate); font-size:15px; }
 
-  #cost { background: var(--bg-soft); }
-  .free-card { max-width: 760px; margin: 0 auto; background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 34px 32px; }
-  .free-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  .free-list li { list-style: none; display: flex; gap: 10px; font-size: 15.5px; color: var(--slate); }
-  .free-list .check { color: var(--green); font-weight: 800; }
-  .pay-note { text-align: center; color: var(--muted); font-size: 14px; margin-top: 26px; }
+  .disclaimer { background:var(--indigo-50); border:1px solid #e4dcfb; border-radius:14px; padding:20px 24px; text-align:center; color:var(--indigo-dark); font-size:14.5px; max-width:860px; margin:0 auto; }
 
-  .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-  .quote { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
-  .quote p { font-size: 15.5px; color: var(--ink); }
-  .quote .who { display: flex; align-items: center; gap: 11px; margin-top: 18px; }
-  .quote .av { width: 38px; height: 38px; border-radius: 50%; background: var(--indigo-50); color: var(--indigo);
-    display: grid; place-items: center; font-weight: 700; font-size: 14px; }
-  .quote .who b { font-size: 14.5px; }
-  .quote .who span { font-size: 13px; color: var(--muted); display: block; }
-  .stars { color: var(--amber); font-size: 15px; letter-spacing: 2px; }
+  .quotes { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .quote { background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:26px; }
+  .quote p { font-size:15.5px; color:var(--ink); }
+  .quote .who { display:flex; align-items:center; gap:11px; margin-top:18px; }
+  .quote .av { width:38px; height:38px; border-radius:50%; background:var(--indigo-50); color:var(--indigo); display:grid; place-items:center; font-weight:700; font-size:14px; }
+  .quote .who b { font-size:14.5px; }
+  .quote .who span { font-size:13px; color:var(--muted); display:block; }
+  .stars { color:var(--amber); font-size:15px; letter-spacing:2px; }
 
-  .faq { max-width: 760px; margin: 0 auto; }
-  .qa { border-bottom: 1px solid var(--line); }
-  .qa button {
-    width: 100%; text-align: left; background: none; border: none; cursor: pointer;
-    padding: 22px 0; font-size: 17.5px; font-weight: 600; color: var(--ink);
-    display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: inherit;
-  }
-  .qa .ans { max-height: 0; overflow: hidden; transition: max-height .3s ease; color: var(--slate); font-size: 15.5px; }
-  .qa .ans p { padding-bottom: 22px; }
-  .qa.open .ans { max-height: 320px; }
-  .qa .pm { color: var(--indigo); font-size: 22px; font-weight: 400; flex-shrink: 0; }
+  .faq { max-width:760px; margin:0 auto; }
+  .qa { border-bottom:1px solid var(--line); }
+  .qa button { width:100%; text-align:left; background:none; border:none; cursor:pointer; padding:22px 0; font-size:17.5px; font-weight:600; color:var(--ink); display:flex; justify-content:space-between; align-items:center; gap:16px; font-family:inherit; }
+  .qa .ans { max-height:0; overflow:hidden; transition:max-height .3s ease; color:var(--slate); font-size:15.5px; }
+  .qa .ans p { padding-bottom:22px; }
+  .qa.open .ans { max-height:340px; }
+  .qa .pm { color:var(--indigo); font-size:22px; font-weight:400; flex-shrink:0; }
 
-  .cta-band { background: linear-gradient(120deg, #1e3a8a 0%, #6d28d9 50%, #a21caf 100%); border-radius: 22px; padding: 60px 40px; text-align: center; color: #fff; }
-  .cta-band h2 { font-size: 34px; }
-  .cta-band p { color: #d9d3ee; font-size: 18px; margin: 14px auto 28px; max-width: 540px; }
+  .cta-band { background:linear-gradient(120deg,#1e3a8a 0%,#6d28d9 50%,#a21caf 100%); border-radius:22px; padding:60px 40px; text-align:center; color:#fff; }
+  .cta-band h2 { font-size:34px; }
+  .cta-band p { color:#d9d3ee; font-size:18px; margin:14px auto 28px; max-width:540px; }
 
-  footer { border-top: 1px solid var(--line); padding: 40px 0; color: var(--muted); font-size: 14px; }
-  .foot { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+  footer { border-top:1px solid var(--line); padding:36px 0; color:var(--muted); font-size:14px; }
+  .foot { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+  .foot-dis { font-size:12.5px; color:var(--muted); max-width:var(--maxw); margin:16px auto 0; padding:0 24px; line-height:1.6; }
 
-  @media (max-width: 860px) {
-    .nav-links { display: none; }
-    .menu-btn { display: block; }
-    .grid-3, .grid-2, .steps, .quotes, .free-list { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 38px; }
-    .hero p.sub { font-size: 18px; }
-    .sec-head h2 { font-size: 30px; }
-    section { padding: 62px 0; }
+  @media (max-width:860px) {
+    .nav-links { display:none; }
+    .menu-btn { display:block; }
+    .grid-3, .grid-2, .steps, .quotes { grid-template-columns:1fr; }
+    .hero h1 { font-size:38px; }
+    .hero p.sub { font-size:18px; }
+    .sec-head h2 { font-size:30px; }
+    section { padding:62px 0; }
   }
 </style>
 <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -172,8 +121,8 @@
 <link rel="canonical" href="https://admitsmith.com/" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://admitsmith.com/" />
-<meta property="og:title" content="AdmitSmith — Free Study-Abroad Counseling for Ireland & the UK" />
-<meta property="og:description" content="Free 1-on-1 counseling for your Master's in Ireland and the UK. We shortlist your universities, guide your application, and support your visa — at no cost." />
+<meta property="og:title" content="AdmitSmith — Student Documents & Applications, Handled by Experts" />
+<meta property="og:description" content="We handle the paperwork students dread — passport, attestation, certificates, admission & entrance-exam forms, scholarships. Done right by experts, fast." />
 <meta name="twitter:card" content="summary" />
 </head>
 <body>
@@ -182,14 +131,12 @@
   <div class="wrap nav">
     <a href="#" class="logo"><span class="logo-mark">A</span> AdmitSmith</a>
     <nav class="nav-links">
+      <a href="#services">Services</a>
       <a href="#how">How it works</a>
       <a href="#why">Why us</a>
-      <a href="#destinations">Destinations</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <div class="nav-cta">
-      <a href="/counseling.html" class="btn btn-primary">Book free counseling</a>
-    </div>
+    <div class="nav-cta"><a href="/order.html" class="btn btn-primary">Get started</a></div>
     <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display='flex'">&#9776;</button>
   </div>
 </header>
@@ -197,18 +144,57 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <span class="eyebrow">For students applying for a Master's abroad</span>
-    <h1>Study your Master's in <span class="hl">Ireland &amp; the UK</span> — with a counselor by your side</h1>
-    <p class="sub">Free 1-on-1 counseling. We shortlist the right universities for you, guide your entire application, and support your visa — at no cost to you.</p>
+    <span class="eyebrow">Student documents &amp; applications — handled for you</span>
+    <h1>The student paperwork you dread, <span class="hl">done by experts</span></h1>
+    <p class="sub">Passport, document attestation, certificates, admission &amp; entrance-exam forms, scholarships — we fill the forms, navigate the confusing portals, and get it done right. You skip the hassle.</p>
     <div class="hero-cta">
-      <a href="/counseling.html" class="btn btn-primary">Book free counseling &rarr;</a>
-      <a href="#how" class="btn btn-ghost">See how it works</a>
+      <a href="/order.html" class="btn btn-primary">Get started &rarr;</a>
+      <a href="#services" class="btn btn-ghost">See all services</a>
     </div>
     <div class="trust-row">
-      <span><i class="ic">&#10003;</i> 100% free counseling</span>
-      <span><i class="ic">&#10003;</i> Expert counselors</span>
-      <span><i class="ic">&#10003;</i> End-to-end support</span>
-      <span><i class="ic">&#10003;</i> Ireland &amp; UK specialists</span>
+      <span><i class="ic">&#10003;</i> Real human experts</span>
+      <span><i class="ic">&#10003;</i> Fast turnaround</span>
+      <span><i class="ic">&#10003;</i> Transparent fees</span>
+      <span><i class="ic">&#10003;</i> Secure &amp; confidential</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Our services</span>
+      <h2>Whatever the application, we handle it</h2>
+      <p>Pick a service, share your details, and our team does the rest — correctly, the first time.</p>
+    </div>
+    <div class="grid-3">
+      <a href="/order.html?service=Passport" class="card svc"><div class="icn">&#128737;</div><h3>Passport assistance</h3><p>Fresh, renewal, or Tatkal — form filling, appointment booking, and document prep, done right.</p><div class="price">from &#8377;499 <small>+ govt fees</small></div><div class="go">Apply &rarr;</div></a>
+      <a href="/order.html?service=Attestation" class="card svc"><div class="icn">&#128196;</div><h3>Attestation &amp; Apostille</h3><p>Get your certificates attested/apostilled for studying or working abroad — MEA, HRD, and more.</p><div class="price">from &#8377;1,499</div><div class="go">Apply &rarr;</div></a>
+      <a href="/order.html?service=PCC" class="card svc"><div class="icn">&#128110;</div><h3>Police Clearance (PCC)</h3><p>Needed for jobs and going abroad — we handle the application and appointment end to end.</p><div class="price">from &#8377;699 <small>+ govt fees</small></div><div class="go">Apply &rarr;</div></a>
+      <a href="/order.html?service=Admission%20form" class="card svc"><div class="icn">&#128221;</div><h3>Admission &amp; exam forms</h3><p>CUET, NEET, JEE, state CETs, college admissions — filled accurately so nothing gets rejected.</p><div class="price">from &#8377;299</div><div class="go">Apply &rarr;</div></a>
+      <a href="/order.html?service=Scholarship" class="card svc"><div class="icn">&#127891;</div><h3>Scholarship applications</h3><p>We help you find and correctly apply for scholarships you qualify for — every field, every deadline.</p><div class="price">from &#8377;299</div><div class="go">Apply &rarr;</div></a>
+      <a href="/order.html?service=Certificate" class="card svc"><div class="icn">&#128209;</div><h3>Certificate services</h3><p>Duplicate marksheets, migration &amp; transfer certificates, provisional/degree certificates.</p><div class="price">from &#8377;399 <small>+ govt fees</small></div><div class="go">Apply &rarr;</div></a>
+      <a href="/order.html?service=Name%20correction" class="card svc"><div class="icn">&#9998;</div><h3>Name / DOB correction</h3><p>Fix name or date-of-birth errors on your documents and certificates — handled properly.</p><div class="price">from &#8377;599 <small>+ govt fees</small></div><div class="go">Apply &rarr;</div></a>
+      <a href="/order.html?service=Education%20loan%20docs" class="card svc"><div class="icn">&#128176;</div><h3>Education loan documents</h3><p>We prepare and organise your entire education-loan document set so your application sails through.</p><div class="price">from &#8377;499</div><div class="go">Apply &rarr;</div></a>
+      <a href="/order.html?service=PAN%20card" class="card svc"><div class="icn">&#128179;</div><h3>PAN card</h3><p>New PAN, corrections, or reprint — quick and error-free, whether for a loan, bank, or job.</p><div class="price">from &#8377;249 <small>+ govt fees</small></div><div class="go">Apply &rarr;</div></a>
+    </div>
+    <div style="text-align:center;margin-top:36px;"><a href="/order.html" class="btn btn-primary">Get started &rarr;</a></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" style="background:var(--bg-soft);">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Handled in four simple steps</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Pick your service</h3><p>Choose what you need and share a few basic details. Takes two minutes.</p></div>
+      <div class="step"><div class="num">2</div><h3>Share your documents</h3><p>Upload or send your documents securely. We tell you exactly what's needed.</p></div>
+      <div class="step"><div class="num">3</div><h3>Our experts do it</h3><p>A trained specialist fills the forms, navigates the portal, and submits — correctly.</p></div>
+      <div class="step"><div class="num">4</div><h3>We track &amp; deliver</h3><p>We follow up, keep you updated, and hand you the final result. Zero hassle.</p></div>
     </div>
   </div>
 </section>
@@ -217,152 +203,42 @@
 <section id="why">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Why choose AdmitSmith</span>
-      <h2>A counselor in your corner — not a call-center</h2>
-      <p>Study-abroad is full of pushy agents and generic advice. We do it differently: honest, personal, and focused entirely on getting you into a university you'll love.</p>
+      <span class="eyebrow">Why AdmitSmith</span>
+      <h2>Real people who actually know the process</h2>
     </div>
     <div class="grid-3">
-      <div class="card">
-        <div class="icn">&#128172;</div>
-        <h3>Personal 1-on-1 guidance</h3>
-        <p>A dedicated counselor who understands your profile, your goals, and your budget — and builds a plan around you, not a template.</p>
-      </div>
-      <div class="card">
-        <div class="icn">&#129517;</div>
-        <h3>End-to-end support</h3>
-        <p>From shortlisting universities to applications, documents, scholarships, and your student visa — we're with you at every step.</p>
-      </div>
-      <div class="card">
-        <div class="icn">&#129309;</div>
-        <h3>Honest &amp; transparent</h3>
-        <p>Our counseling is free because universities pay us when you enroll. So our only goal is your admit — never an upsell.</p>
-      </div>
+      <div class="card"><div class="icn">&#129489;&#8205;&#128188;</div><h3>Handled by real experts</h3><p>Not a bot, not a template — trained specialists who navigate these portals every day and know every field.</p></div>
+      <div class="card"><div class="icn">&#9201;</div><h3>Save days, avoid rejections</h3><p>One wrong field means rejection and a re-do. We get it right the first time, so you save time and stress.</p></div>
+      <div class="card"><div class="icn">&#128274;</div><h3>Transparent &amp; secure</h3><p>Clear service fees, no surprises, and your documents kept strictly confidential — used only for your request.</p></div>
+    </div>
+    <div style="margin-top:44px;">
+      <div class="disclaimer"><b>Please note:</b> AdmitSmith is a private assistance service and is <b>not affiliated with, or endorsed by, any government department</b>. Our fees cover expert assistance only; official government or statutory fees (where applicable) are separate and paid to the respective authority.</div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section>
+<!-- TESTIMONIALS (placeholder — swap for real ones) -->
+<section style="background:var(--bg-soft);">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">What we handle</span>
-      <h2>Everything from shortlist to boarding pass</h2>
-    </div>
-    <div class="grid-2">
-      <div class="card"><div class="icn">&#127891;</div><h3>University shortlisting</h3><p>We match you to Master's programs in Ireland &amp; the UK that fit your profile, budget, and career goals — with a realistic mix of ambitious and safe options.</p></div>
-      <div class="card"><div class="icn">&#128221;</div><h3>Applications &amp; documents</h3><p>We guide your entire application — forms, SOP and essay review, LORs, and transcripts — so nothing is missed and everything is submitted right.</p></div>
-      <div class="card"><div class="icn">&#128196;</div><h3>Visa &amp; pre-departure</h3><p>Student-visa documentation, interview prep, and pre-departure guidance — accommodation, forex, and what to expect when you land.</p></div>
-      <div class="card"><div class="icn">&#128176;</div><h3>Scholarships &amp; loans</h3><p>We help you find scholarships you qualify for and connect you with trusted education-loan and forex partners.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section id="how" style="background: var(--bg-soft);">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">How it works</span>
-      <h2>Four simple steps to your admit</h2>
-    </div>
-    <div class="steps">
-      <div class="step"><div class="num">1</div><h3>Book your free call</h3><p>Tell us your background and goals. A counselor reaches out within 24 hours.</p></div>
-      <div class="step"><div class="num">2</div><h3>We build your shortlist</h3><p>We recommend the right universities and programs for your profile and budget.</p></div>
-      <div class="step"><div class="num">3</div><h3>We guide your applications</h3><p>Documents, SOP, essays, deadlines — we manage it all with you, start to finish.</p></div>
-      <div class="step"><div class="num">4</div><h3>You get admitted &amp; fly</h3><p>Offer in hand, we handle your visa and pre-departure. Next stop: campus.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- DESTINATIONS -->
-<section id="destinations">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Where you'll study</span>
-      <h2>Two of the smartest destinations for a Master's</h2>
-    </div>
-    <div class="grid-2">
-      <div class="card">
-        <div class="icn">&#127470;&#127466;</div>
-        <h3>Ireland</h3>
-        <p>Europe's fast-rising tech and pharma hub. English-speaking, world-class universities, and a <b>2-year post-study work visa</b> — an easier, less-crowded path than the US.</p>
-      </div>
-      <div class="card">
-        <div class="icn">&#127468;&#127463;</div>
-        <h3>United Kingdom</h3>
-        <p>Globally respected universities and <b>1-year Master's</b> programs that get you working sooner. A 2-year Graduate Route visa lets you stay and build your career.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COST -->
-<section id="cost">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">What it costs</span>
-      <h2>Counseling &amp; application support — <span class="hl">free</span></h2>
-      <p>Genuinely free to you. Universities pay us a commission when you enroll, so our only job is getting you admitted somewhere you'll love. No hidden fees, no pressure.</p>
-    </div>
-    <div class="free-card">
-      <ul class="free-list">
-        <li><span class="check">&#10003;</span> <span>1-on-1 expert counseling</span></li>
-        <li><span class="check">&#10003;</span> <span>University shortlisting</span></li>
-        <li><span class="check">&#10003;</span> <span>Application guidance</span></li>
-        <li><span class="check">&#10003;</span> <span>SOP &amp; document review</span></li>
-        <li><span class="check">&#10003;</span> <span>Visa &amp; pre-departure support</span></li>
-        <li><span class="check">&#10003;</span> <span>Scholarship &amp; loan guidance</span></li>
-      </ul>
-      <div style="text-align:center;margin-top:26px;">
-        <a href="/counseling.html" class="btn btn-primary">Book your free counseling &rarr;</a>
-      </div>
-    </div>
-    <p class="pay-note">Optional premium support (in-depth SOP editing, dedicated visa assistance) available on request.</p>
-  </div>
-</section>
-
-<!-- TESTIMONIALS (placeholder — swap for real ones after first students) -->
-<section>
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">What students say</span>
-      <h2>From confused to admitted</h2>
-    </div>
+    <div class="sec-head"><span class="eyebrow">What students say</span><h2>Paperwork, off their plate</h2></div>
     <div class="quotes">
-      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"They shortlisted universities I'd never have found on my own, and guided every document. Got my admit to Ireland stress-free."</p><div class="who"><div class="av">RS</div><div><b>Riya S.</b><span>MSc Data Analytics, Ireland</span></div></div></div>
-      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Honest advice, no pressure to pick a random university. My counselor actually cared. Visa was approved first try."</p><div class="who"><div class="av">AK</div><div><b>Arjun K.</b><span>MSc Management, UK</span></div></div></div>
-      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Everything was free and they still helped with scholarships and my loan. Couldn't have done it without them."</p><div class="who"><div class="av">MP</div><div><b>Meera P.</b><span>MSc Computer Science, Ireland</span></div></div></div>
+      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"My passport renewal was done without me figuring out that confusing website. They booked everything and told me exactly what to carry."</p><div class="who"><div class="av">RS</div><div><b>Riya S.</b><span>Delhi</span></div></div></div>
+      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Got my degree certificate attested for my Masters abroad in days. I had no idea where to even start — they handled all of it."</p><div class="who"><div class="av">AK</div><div><b>Arjun K.</b><span>Pune</span></div></div></div>
+      <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"They filled my CUET form perfectly and on time. Worth every rupee — I was terrified of making a mistake."</p><div class="who"><div class="av">MP</div><div><b>Meera P.</b><span>Hyderabad</span></div></div></div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section id="faq" style="background: var(--bg-soft);">
+<section id="faq">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Questions</span>
-      <h2>Everything you might ask</h2>
-    </div>
+    <div class="sec-head"><span class="eyebrow">Questions</span><h2>Everything you might ask</h2></div>
     <div class="faq">
-      <div class="qa">
-        <button>Is it really free? <span class="pm">+</span></button>
-        <div class="ans"><p>Yes — our counseling and application support are completely free to you. We're paid a commission by universities when you enroll, so our incentive is simple: get you admitted to a place you'll love. No fees, no pressure.</p></div>
-      </div>
-      <div class="qa">
-        <button>Which countries and universities do you cover? <span class="pm">+</span></button>
-        <div class="ans"><p>We specialise in Master's programs in Ireland and the UK. We shortlist universities based on your profile, budget, and goals — a realistic mix of ambitious and safe options.</p></div>
-      </div>
-      <div class="qa">
-        <button>How do you make money if it's free? <span class="pm">+</span></button>
-        <div class="ans"><p>Universities pay partner counselors a commission for every student who successfully enrolls. That's a standard part of how international admissions work — and it means you pay nothing for our help.</p></div>
-      </div>
-      <div class="qa">
-        <button>When should I start? <span class="pm">+</span></button>
-        <div class="ans"><p>Ideally 6–12 months before your intended intake, but we can help at any stage — even if your deadlines are close. Book a free call and we'll map out your timeline.</p></div>
-      </div>
-      <div class="qa">
-        <button>Do you help with the student visa? <span class="pm">+</span></button>
-        <div class="ans"><p>Yes — end to end. We guide your visa documentation, interview prep, and pre-departure (accommodation, forex, and what to expect on arrival).</p></div>
-      </div>
+      <div class="qa"><button>Are you a government website? <span class="pm">+</span></button><div class="ans"><p>No. AdmitSmith is a private assistance service — we help you complete your applications correctly and save you the hassle. Any official government fees are paid separately to the government; our fee is for our expert help.</p></div></div>
+      <div class="qa"><button>Is my information and are my documents safe? <span class="pm">+</span></button><div class="ans"><p>Completely. Your details and documents are kept strictly confidential and used only to process your request — never shared, sold, or published.</p></div></div>
+      <div class="qa"><button>How much does it cost? <span class="pm">+</span></button><div class="ans"><p>Each service has a clear, upfront assistance fee (shown on every service). Where a government/statutory fee applies, it's separate and actual — we tell you the exact amount before you pay anything.</p></div></div>
+      <div class="qa"><button>What if a service needs me to be present (like passport biometrics)? <span class="pm">+</span></button><div class="ans"><p>Some services require you to visit in person for biometrics or verification (for example, a passport appointment). We handle everything else — the form, the appointment, and the document prep — so your visit is quick and smooth.</p></div></div>
+      <div class="qa"><button>How do I pay, and how long does it take? <span class="pm">+</span></button><div class="ans"><p>Once you send your request, we confirm the requirements, timeline, and total cost, then share a secure payment link. Turnaround depends on the service, and we keep you updated at every step.</p></div></div>
     </div>
   </div>
 </section>
@@ -371,9 +247,9 @@
 <section>
   <div class="wrap">
     <div class="cta-band">
-      <h2>Your Master's abroad — with expert help, free.</h2>
-      <p>Book a free counseling call and get a personalised university shortlist within 24 hours.</p>
-      <a href="/counseling.html" class="btn btn-primary" style="background:#fff;color:var(--ink);box-shadow:none;">Book free counseling &rarr;</a>
+      <h2>Skip the paperwork stress.</h2>
+      <p>Tell us what you need — our experts will take it from here.</p>
+      <a href="/order.html" class="btn btn-primary" style="background:#fff;color:var(--ink);box-shadow:none;">Get started &rarr;</a>
     </div>
   </div>
 </section>
@@ -383,6 +259,7 @@
     <span>&copy; 2026 AdmitSmith &mdash; a brand of Neoteric Business Solutions Pvt. Ltd.</span>
     <span><a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a> &middot; <a href="/contact.html">Contact</a> &middot; hello@admitsmith.com</span>
   </div>
+  <div class="foot-dis">AdmitSmith is a private document-assistance service and is not affiliated with, or endorsed by, any government department or official body. Service fees are for assistance only; official government/statutory fees are separate.</div>
 </footer>
 
 <script>
